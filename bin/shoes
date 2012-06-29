@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+ruby -Ilib -Ishoes/lib -rshoes -rshoes/configuration -e \
+  "Shoes.configuration.backend = :qt; require '$1';"
