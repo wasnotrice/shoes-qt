@@ -4,9 +4,12 @@ A Qt backend for [Shoes 4](http://github.com/shoes/shoes4).
 
 ## Prerequisites
 
-Tested (so far) on OS X, with rvm ruby 1.9.3-p125, and qt 4.8.1,
-installed via Homebrew. These instructions assume that you have git
-installed, and ruby 1.9.3 installed via rvm.
+Tested on 
+
+- OS X 10.7, with rvm ruby 1.9.3-p125, and qt 4.8.1, installed via Homebrew.
+- Ubuntu 11.10, with rvm ruby 1.9.3-p194, and qt 4.7.1, installed via apt-get.
+
+These instructions assume that you have git installed, and ruby 1.9.3 installed via rvm.
 
 ### OS X
 
@@ -20,7 +23,9 @@ $ cd shoes-qt
 $ gem install qtbindings
 ```
 
-### Ubuntu
+### Linux
+
+These instructions are for Ubuntu. Modify as needed for your flavor.
 
 Install `qt`, clone the git repo, and install the `qtbindings` gem.
 
@@ -29,6 +34,17 @@ $ sudo apt-get install libqt4-ruby libqt4-dev qt4-qmake cmake
 $ git clone https://github.com/wasnotrice/shoes-qt.git
 $ cd shoes-qt
 $ gem install qtbindings
+```
+
+### Windows
+
+Clone the repo, and install `qtbindings` (also installs `qt`).
+
+
+```
+> git clone https://github.com/wasnotrice/shoes-qt.git
+> cd shoes-qt
+> gem install qtbindings
 ```
 
 
