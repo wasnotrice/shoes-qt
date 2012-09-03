@@ -9,6 +9,8 @@ module Shoes
         @real.resize 600, 500
       end
 
+      attr_reader :dsl, :real
+
       def open
         @real.show
         @real.raise
