@@ -4,16 +4,16 @@ module Shoes
       def initialize(dsl)
         @dsl = dsl
         @app = ::Qt::Application.new []
-        @real = ::Qt::MainWindow.new
-        @real.window_title = "Shoes 4"
-        @real.resize 600, 500
+        @main = ::Qt::MainWindow.new
+        @main.window_title = @dsl.app_title
+        @main.resize @dsl.width, @dsl.height
       end
 
-      attr_reader :dsl, :real
+      attr_reader :dsl, :main
 
       def open
-        @real.show
-        @real.raise
+        @main.show
+        @main.raise
         #@real.activate_window
         @app.exec
       end
