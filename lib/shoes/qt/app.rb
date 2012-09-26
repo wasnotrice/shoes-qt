@@ -17,6 +17,10 @@ module Shoes
         #@real.activate_window
         @app.exec
       end
+
+      def quit
+        @app.exit(0)
+      end
     end
   end
 end
