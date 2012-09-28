@@ -2,8 +2,8 @@ module Shoes
   module Qt
     class App
       def initialize(dsl)
+        ::Shoes::Qt.init
         @dsl = dsl
-        @app = ::Qt::Application.new []
         @main = ::Qt::MainWindow.new
         @main.window_title = @dsl.app_title
         @main.resize @dsl.width, @dsl.height
@@ -14,12 +14,11 @@ module Shoes
       def open
         @main.show
         @main.raise
-        #@real.activate_window
-        @app.exec
+        ::Shoes::Qt.start
       end
 
       def quit
-        @app.exit(0)
+        @main.close
       end
     end
   end
