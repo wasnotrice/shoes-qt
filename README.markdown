@@ -68,3 +68,22 @@ You should see a blank "Shoes 4" window.
 
     $ rake spec:integration # Run the Shoes test suite with the Qt backend
 
+To add a spec to the Qt suite, first tag it with `:qt` in the `shoes4` repo, like this:
+
+```ruby
+it "knocks socks off", :qt do
+   # ...
+end
+```
+
+Then, update the version in the `shoes-qt` repo:
+
+```
+$ cd shoes
+$ git pull
+$ cd ..
+$ git commit -m "Update shoes"
+```
+
+and you're good to go.
+
