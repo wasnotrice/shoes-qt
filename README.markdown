@@ -48,17 +48,12 @@ Clone the repo, and install `qtbindings` (also installs `qt`).
 ```
 
 
-### Packaging Shoes (*nix)
+### Using Shoes 4
 
-Shoes 4 is not yet published as a gem, so we have to package the shoes
-gem and install locally.
+Shoes 4 is not yet published as a gem. This repo contains the Shoes 4 repo as a submodule, though.
+You can find it in the `shoes` directory. The rake tasks and `bin/shoes` include this directory already,
+but if you need the Shoes 4 code, that's where it is.
 
-```
-$ cd /path/to/shoes4/repo
-$ rake package
-$ cd /path/to/shoes-qt/repo
-$ gem install /path/to/shoes4/repo/pkg/shoes-4.0.0.pre1.gem
-```
 
 ### Verifying your setup
 
@@ -67,3 +62,9 @@ Try running
     $ bin/shoes samples/simple-app.rb
 
 You should see a blank "Shoes 4" window.
+
+
+## Testing
+
+    $ rake spec:integration # Run the Shoes test suite with the Qt backend
+
